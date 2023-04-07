@@ -1,0 +1,37 @@
+.Addpage{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.Addpage form{
+    width: 500px;
+    height: 400px;
+  /* border: 1px solid grey; */
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px grey;
+}
+.Addpage form label{
+   font-size: 20px;
+   margin-left: 20px;
+   margin-top: 20px;
+ }
+
+ .Addpage form input{
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    border-bottom: 2px solid grey;
+    width: 50%;
+    margin-left:40px;
+    margin-top: 20px;
+ }
+
+ .Addpage button{
+    margin-left: 2%;
+    width: 10%;
+ }
+
+ 

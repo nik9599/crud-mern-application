@@ -1,0 +1,25 @@
+table {
+  /* margin-left: 8%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tr {
+  padding-left: 50px;
+  padding-top: 10px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.tr:hover {
+  overflow: visible;
+}
+
+.main {
+  margin-left: 20%;
+  width: 900px;
+}
+.icon {
+  padding-left: 30px;
+  cursor: pointer;
+}
