@@ -1,8 +1,8 @@
 import "./Mainpage.css";
-// import Value from "./data.js";
-import FetchApi from "../apiCalling/FetchApi";
+
+
 import { Link } from "react-router-dom";
-import { getApi } from "../apiCalling/FetchApi";
+
 import Data from "./Data.jsx";
 
 export default function Mainpage() {

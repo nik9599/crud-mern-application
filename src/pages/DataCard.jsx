@@ -2,12 +2,12 @@ import React from "react";
 import "./data.css";
 import { Link } from "react-router-dom";
 import { deletUser } from "../apiCalling/FetchApi";
-import { useNavigate } from "react-router-dom";
-import Update from "./Update";
+
+
 
 
 function DataCard({ _id, Name, email, password }) {
-  const Navigator = useNavigate();
+  
 
   const DeletData = async () => {
     const iddata = _id;

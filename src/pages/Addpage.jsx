@@ -22,7 +22,7 @@ export default function Addpage() {
       confirmPassword: confirmpassword,
     };
     if (confirmpassword == password) {
-      const res = await addUser(data).then(navigator("/"));
+       await addUser(data).then(navigator("/"));
     } else {
       setPassword("")
       setConfirmPassword("")

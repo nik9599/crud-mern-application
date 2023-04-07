@@ -1,7 +1,8 @@
 import axios from "axios";
-const URL = process.env.REACT_APP_GET_API;
-export const getApi = async () => {
 
+
+export const getApi = async () => {
+  const URL = process.env.REACT_APP_GET_API;
   try {
     const dta = await axios.get(URL);
 
@@ -12,6 +13,7 @@ export const getApi = async () => {
 };
 
 export const addUser = async (data) => {
+  const URL = process.env.REACT_APP_GET_API;
   try {
     return await axios.post(URL, data);
   } catch (error) {
