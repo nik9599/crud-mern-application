@@ -1,10 +1,9 @@
 import axios from "axios";
 
-
 export const getApi = async () => {
-  const URL = process.env.REACT_APP_GET_API;
+  const GET_URL = "http://localhost:8080/data";
   try {
-    const dta = await axios.get(URL);
+    const dta = await axios.get(GET_URL);
 
     return dta;
   } catch (err) {
@@ -13,7 +12,7 @@ export const getApi = async () => {
 };
 
 export const addUser = async (data) => {
-  const URL = process.env.REACT_APP_GET_API;
+  const URL = "http://localhost:8080/data";
   try {
     return await axios.post(URL, data);
   } catch (error) {
@@ -23,7 +22,7 @@ export const addUser = async (data) => {
 
 // export default FetchApi;
 
-const deletURL = process.env.REACT_APP_DELET_API;
+const deletURL = "http://localhost:8080/data/";
 
 export const deletUser = async (id) => {
   try {
@@ -33,9 +32,8 @@ export const deletUser = async (id) => {
     console.log(err.body);
   }
 };
-const upDateURL = process.env.REACT_APP_UPDATE_API;
+const upDateURL = "http://localhost:8080/data/";
 export const updateUser = async (id, data) => {
-  
   try {
     return await axios.patch(upDateURL + id, data);
   } catch (error) {
@@ -43,7 +41,7 @@ export const updateUser = async (id, data) => {
   }
 };
 
-const urL = process.env.REACT_APP_GET_ID_API;
+const urL = "http://localhost:8080/data/";
 export const getById = async (id) => {
   try {
     return await axios.get(urL + id);
