@@ -1,7 +1,11 @@
 import axios from "axios";
 
+
+// const baseUrl = "https://crud-mern-application-api.vercel.app/"
+
 export const getApi = async () => {
-  const GET_URL = "http://localhost:8080/data";
+  // const GET_URL = "http://localhost:8080/data";
+  const GET_URL = "https://crud-mern-application-api.vercel.app/data";
   try {
     const dta = await axios.get(GET_URL);
 
@@ -12,7 +16,8 @@ export const getApi = async () => {
 };
 
 export const addUser = async (data) => {
-  const URL = "http://localhost:8080/data";
+  // const URL = "http://localhost:8080/data";
+  const URL= "https://crud-mern-application-api.vercel.app/data";
   try {
     return await axios.post(URL, data);
   } catch (error) {
@@ -22,7 +27,8 @@ export const addUser = async (data) => {
 
 // export default FetchApi;
 
-const deletURL = "http://localhost:8080/data/";
+// const deletURL = "http://localhost:8080/data/";
+const deletURL= "https://crud-mern-application-api.vercel.app/data";
 
 export const deletUser = async (id) => {
   try {
@@ -32,7 +38,8 @@ export const deletUser = async (id) => {
     console.log(err.body);
   }
 };
-const upDateURL = "http://localhost:8080/data/";
+// const upDateURL = "http://localhost:8080/data/";
+const upDateURL= "https://crud-mern-application-api.vercel.app/data";
 export const updateUser = async (id, data) => {
   try {
     return await axios.patch(upDateURL + id, data);
@@ -41,7 +48,8 @@ export const updateUser = async (id, data) => {
   }
 };
 
-const urL = "http://localhost:8080/data/";
+// const urL = "http://localhost:8080/data/";
+const urL = "https://crud-mern-application-api.vercel.app/data";
 export const getById = async (id) => {
   try {
     return await axios.get(urL + id);
