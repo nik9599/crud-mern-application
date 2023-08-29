@@ -26,24 +26,29 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors())
 
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header(
-      "Access-Control-Allow-Headers",
-      "Origin,X-Requested-With, Content-Type , Accept, Authorization"
-    );
+// app.use((req, res, next) => {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header(
+//       "Access-Control-Allow-Headers",
+//       "Origin,X-Requested-With, Content-Type , Accept, Authorization"
+//     );
   
-    if (req.method === "OPTIONS") {
-      res.header(
-        "Acess-Control-Allow-Methods",
-        "PUT, PATCH , DELET , POST , GET"
-      );
-      return res.status(200).json({});
-    }
-    next();
-  });
+//     if (req.method === "OPTIONS") {
+//       res.header(
+//         "Acess-Control-Allow-Methods",
+//         "PUT, PATCH , DELET , POST , GET"
+//       );
+//       return res.status(200).json({});
+//     }
+//     next();
+//   });
 
-  
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://crud-mern-application-front.vercel.app');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
 
    app.use('/data' , dataRoutes);
 
