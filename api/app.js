@@ -43,6 +43,8 @@ app.use((req, res, next) => {
     next();
   });
 
+  
+
    app.use('/data' , dataRoutes);
 
   //error handling
