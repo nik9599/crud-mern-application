@@ -11,7 +11,7 @@ const cors = require('cors')
  PASSWORD = process.env.PASSWORD
 
 mongoose.connect(
-    `mongodb+srv://${USERNAME}:${PASSWORD}@mongopractice.4ujczly.mongodb.net/?retryWrites=true&w=majority`
+  'mongodb+srv://admin:admin@mongopractice.4ujczly.mongodb.net/?retryWrites=true&w=majority'
 ).then(function (db) {
     console.clear();
     console.log("db connected");

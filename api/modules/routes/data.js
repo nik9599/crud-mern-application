@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const router = express.Router();
 
-const data = require("../skema/dataSchema");
+const data = require("../skema/user.js");
 
 //get request routes
 

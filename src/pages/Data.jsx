@@ -10,7 +10,7 @@ function Data() {
     getAllUser();
   }, []);
 
-  let res;
+  
   const getAllUser = async () => {
     const res = await getApi()
       .then((result) => {
@@ -22,12 +22,12 @@ function Data() {
  
   return (
     <div className="data">
-      {users.map(({_id , name , email ,password}) => (
+      {users.map(({_id , name , username ,password}) => (
         
         <DataTable
           _id={_id}
           Name={name}
-          email={email}
+          email={username}
           password={password}
         />
       ))}

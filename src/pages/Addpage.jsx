@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Addpage() {
   const [firstname, setFirstName] = useState("");
   const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+  const [username, setEmail] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
 
   const navigator = useNavigate();
@@ -17,7 +17,7 @@ export default function Addpage() {
 
     const data = {
       name: firstname,
-      email: email,
+      username: username,
       password: password,
       confirmPassword: confirmpassword,
     };
@@ -51,7 +51,7 @@ export default function Addpage() {
           type="email"
           id="email"
           name="email"
-          value={email}
+          value={username}
           onChange={(event) => {
             setEmail(event.target.value);
           }}
